@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<!--
+
+  @(#)package.html	1.60 98/01/27
+
+  
+
+-->
+</head>
+<body bgcolor="white">
+
+<p>
+laser.ddg is a library to aid in the construction and traversal of a Data Derivation Graph. A Data
+Derivation Graph (DDG) stores information about the execution of software, recording information about
+the procedural activities that are executed and how data is produced and consumed by these procedures. 
+It is the responsibility of the client of this library to construct the DDG by calling methods
+provided here.  Once constructed, the library provides support for traversing the DDG (and eventually querying
+and displaying the DDG).
+</p>
+
+<p>
+A DDG consists primarily of two types of nodes:  data instances (Data Instance Nodes, 
+also called DINs) or procedures (Procedure Instance Nodes, also called PINs).  Procedure Instance nodes are connected to Data Instance Nodes
+on input edges and output edges.  Similarly, Data Instance Nodes are connected to the Process Instance Nodes
+that produce and consume the data.
+</p>
+
+<p>Typically, a traversal of the DDG would result in an alternation
+between Procedure Instance Nodes and Data Instance Nodes.  In particular, a Procedure Instance Node 
+may have an output edge to a Data Instance Node, which then has a used-by edge to another Procedure Instance Node
+that uses the data as input.  All edges are bidirectional, so we could also traverse the DDG from a Procedure
+Instance Node, follow an input edge to a Data Instance Node, and then follow a produced-by edge to the
+Procedure Instance Node that produced the data.
+</p>
+
+<p>
+It is also possible for Procedure Instance Nodes to connect directly to each other.  This would 
+indicate a control flow relationship in which no data was passed.  These are referred to as predecessors 
+and successors of the Procedure Instance Nodes.
+</p>
+
+<p>
+There are iterators to walk over all inputs, outputs, predecessors and successors of Procedure Instance Nodes.
+For the inputs and outputs, it is possible to iterate over the values or over the parameter names
+that the values are bound to.  There are also iterators to walk over all users of a Data Instance Node.  
+Each Data Instance Node will have a single producer, so there is a simple getter, rather than an iterator 
+in that case.
+</p>
+
+<p>
+The ProcedureInstanceNode interface is extended by three interfaces:
+StartProcedureInstanceNode, IntermediateProcedureInstanceNode and
+FinishProcedureInstanceNode.
+Those become useful in the cases where a procedure is decomposed into smaller
+procedures.  For example, a method (we refer to this method as the parent method)
+may call one or more other methods.  When the parent is initially called, a
+StartProcedureInstanceNode should be created.  After a child of the parent method completes
+execution, control returns to the parent.  This would be represented in the DDG as
+an Intermediate Procedure Instance Node or a Finish Procedure Instance Node
+depending on whether there are any children of the parent method that have not yet
+been visited. If the last child of the parent method has been visited, a Finish 
+Procedure Instance Node is instantiated. If all child methods have completed
+successfully, the Finish Procedure Instance Node should be set to completed. If
+an exception is thrown by any of the child methods, the exception should be represented with a
+Data Instance Node that is output from the child Finish Node to the parent.  The child Finish Node
+should be marked as terminated.  If the parent propagates the exception rather than handling it,
+it should also have a Finish Procedure Node that is marked as terminated and that outputs the exception
+Data Instance Node.  For methods that are not
+decomposed in the DDG, it is sufficient to just use a ProcedureInstanceNode.
+</p>
+
+<p>
+Each time that a procedure produces output, it should create a Data Instance Node with a 
+value.  Its value must be serializable in order to allow the actual objects to be recorded 
+in the DDG. In this way the Data Instance Nodes represent the different states of the same 
+object in the process being described by a DDG.  The client should create the connections between
+the producer of the data and the data.  The client should also add the Data Instance Node to the 
+ProvenanceData object, at which point it will be given a unique id.
+</p>
+
+<p>
+Each Procedure Instance Node has an associated AgentConfiguration object.  This object
+contains information about the agent responsible for executing the procedure.  The AgentConfiguration
+object can record information about the software version, configuration parameters, identify a 
+Web service or provide other information about 
+the execution environment.  If a person plays the role of the agent, it could record
+who the person is.
+</p>
+
+<p>
+A ProvenanceData object maintains global information about the entire graph, identifying the 
+starting Procedure Instance Node, the Data Instance Nodes that represent inputs to the
+process described by the DDG, and the set of Data Instance Nodes that represent the outputs
+produced by the process.  This information can be used to start forward or backward traversals
+of the DDG.  The ProvenanceData object also maintains the collection of all Data Instance Nodes and
+all Procedure Instance Nodes to enable querying the DDG.
+</p>
+
+
+
+
+<!-- Put @see and @since tags down here. -->
+
+</body>
+</html>

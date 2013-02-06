@@ -1,0 +1,185 @@
+<class-diagram version="1.0.3" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true">  
+  <interface id="1" corner="BOTTOM_RIGHT" language="java" name="laser.ddg.ProcedureInstanceNode" project="ddg" 
+    file="/ddg/laser/ddg/ProcedureInstanceNode.java" binary="false">    
+    <position x="336" y="-41" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </interface>  
+  <class id="2" corner="BOTTOM_RIGHT" language="java" name="laser.ddg.AbstractProcedureInstanceNode" project="ddg" 
+    file="/ddg/laser/ddg/AbstractProcedureInstanceNode.java" binary="false">    
+    <position x="540" y="101" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <interface id="3" corner="BOTTOM_RIGHT" language="java" name="laser.ddg.StartProcedureInstanceNode" project="ddg" 
+    file="/ddg/laser/ddg/StartProcedureInstanceNode.java" binary="false">    
+    <position x="83" y="42" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </interface>  
+  <interface id="4" corner="BOTTOM_RIGHT" language="java" name="laser.ddg.IntermediateProcedureInstanceNode" 
+    project="ddg" file="/ddg/laser/ddg/IntermediateProcedureInstanceNode.java" binary="false">    
+    <position x="81" y="140" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </interface>  
+  <interface id="5" corner="BOTTOM_RIGHT" language="java" name="laser.ddg.FinishProcedureInstanceNode" project="ddg" 
+    file="/ddg/laser/ddg/FinishProcedureInstanceNode.java" binary="false">    
+    <position x="83" y="243" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </interface>  
+  <class id="6" corner="BOTTOM_RIGHT" language="java" name="laser.juliette.ddgbuilder.StepInstanceNode" 
+    project="juliette-ddgbuilder" file="/juliette-ddgbuilder/laser/juliette/ddgbuilder/StepInstanceNode.java" 
+    binary="false">    
+    <position x="451" y="250" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="7" corner="BOTTOM_RIGHT" language="java" name="laser.juliette.ddgbuilder.StartStepInstanceNode" 
+    project="juliette-ddgbuilder" file="/juliette-ddgbuilder/laser/juliette/ddgbuilder/StartStepInstanceNode.java" 
+    binary="false">    
+    <position x="296" y="346" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="8" corner="BOTTOM_RIGHT" language="java" name="laser.juliette.ddgbuilder.IntermStepInstanceNode" 
+    project="juliette-ddgbuilder" file="/juliette-ddgbuilder/laser/juliette/ddgbuilder/IntermStepInstanceNode.java" 
+    binary="false">    
+    <position x="287" y="425" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="9" corner="BOTTOM_RIGHT" language="java" name="laser.juliette.ddgbuilder.FinishStepInstanceNode" 
+    project="juliette-ddgbuilder" file="/juliette-ddgbuilder/laser/juliette/ddgbuilder/FinishStepInstanceNode.java" 
+    binary="false">    
+    <position x="311" y="528" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="10" corner="BOTTOM_RIGHT" language="java" name="laser.juliette.ddgbuilder.StartVirtualNode" 
+    project="juliette-ddgbuilder" file="/juliette-ddgbuilder/laser/juliette/ddgbuilder/StartVirtualNode.java" 
+    binary="false">    
+    <position x="-103" y="99" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="11" corner="BOTTOM_RIGHT" language="java" name="laser.juliette.ddgbuilder.IntermVirtualNode" 
+    project="juliette-ddgbuilder" file="/juliette-ddgbuilder/laser/juliette/ddgbuilder/IntermVirtualNode.java" 
+    binary="false">    
+    <position x="-90" y="232" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="12" corner="BOTTOM_RIGHT" language="java" name="laser.juliette.ddgbuilder.FinishVirtualNode" 
+    project="juliette-ddgbuilder" file="/juliette-ddgbuilder/laser/juliette/ddgbuilder/FinishVirtualNode.java" 
+    binary="false">    
+    <position x="-15" y="364" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <realization>    
+    <end type="SOURCE" nodeId="2"/>    
+    <end type="TARGET" nodeId="1"/>  
+  </realization>  
+  <association>    
+    <end type="SOURCE" nodeId="2" navigable="false">      
+      <attribute name="successors"/>      
+      <multiplicity minimum="0" maximum="2147483647">        
+        <position x="425" y="-47" width="16" height="14"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" nodeId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization>    
+    <end type="SOURCE" nodeId="8"/>    
+    <end type="TARGET" nodeId="6"/>  
+  </generalization>  
+  <generalization>    
+    <end type="SOURCE" nodeId="3"/>    
+    <end type="TARGET" nodeId="1"/>  
+  </generalization>  
+  <association>    
+    <end type="SOURCE" nodeId="2" navigable="false">      
+      <attribute name="predecessors"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" nodeId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization>    
+    <end type="SOURCE" nodeId="10"/>    
+    <end type="TARGET" nodeId="3"/>  
+  </realization>  
+  <realization>    
+    <end type="SOURCE" nodeId="12"/>    
+    <end type="TARGET" nodeId="5"/>  
+  </realization>  
+  <realization>    
+    <end type="SOURCE" nodeId="7"/>    
+    <end type="TARGET" nodeId="3"/>  
+  </realization>  
+  <realization>    
+    <end type="SOURCE" nodeId="9"/>    
+    <end type="TARGET" nodeId="5"/>  
+  </realization>  
+  <generalization>    
+    <end type="SOURCE" nodeId="9"/>    
+    <end type="TARGET" nodeId="6"/>  
+  </generalization>  
+  <generalization>    
+    <end type="SOURCE" nodeId="5"/>    
+    <end type="TARGET" nodeId="1"/>  
+  </generalization>  
+  <realization>    
+    <end type="SOURCE" nodeId="11"/>    
+    <end type="TARGET" nodeId="4"/>  
+  </realization>  
+  <realization>    
+    <end type="SOURCE" nodeId="8"/>    
+    <end type="TARGET" nodeId="4"/>  
+  </realization>  
+  <generalization>    
+    <end type="SOURCE" nodeId="4"/>    
+    <end type="TARGET" nodeId="1"/>  
+  </generalization>  
+  <generalization>    
+    <end type="SOURCE" nodeId="7"/>    
+    <end type="TARGET" nodeId="6"/>  
+  </generalization>  
+  <generalization>    
+    <end type="SOURCE" nodeId="6"/>    
+    <end type="TARGET" nodeId="2"/>  
+  </generalization>  
+  <classifier-display autosize="true" package="true" initial-value="false" signature="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="true" package="true" protected="true" private="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
